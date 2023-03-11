@@ -18,7 +18,6 @@
       { "paths": [{ "name": "react", "importNames": ["default"] }] }
     ],
     "sort-destructure-keys/sort-destructure-keys": "error",
-    // React
     "react/display-name": "error",
     "react/jsx-handler-names": [
       "error",
@@ -32,7 +31,6 @@
     "react/destructuring-assignment": ["error", "always"],
     "react/jsx-curly-brace-presence": "error",
     "react/jsx-pascal-case": "error",
-    // TypeScript
     "@typescript-eslint/no-non-null-assertion": "error",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-var-requires": "off",
@@ -45,7 +43,6 @@
       "error",
       { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
     ],
-    // Import
     "import/order": [
       "error",
       {
