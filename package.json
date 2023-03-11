@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fix:lint": "next lint --fix"
+    "fix:eslint": "next lint --fix"
   },
   "dependencies": {
     "@types/node": "18.14.6",
