@@ -1,3 +1,75 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": "./tsconfig.json" },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "plugins": ["import", "unused-imports", "sort-destructure-keys"],
+  "rules": {
+    "curly": "error",
+    "no-console": ["error", { "allow": ["warn", "info", "error"] }],
+    "prefer-const": "error",
+    "prefer-arrow-callback": "error",
+    "arrow-body-style": ["error", "always"],
+    "no-restricted-imports": [
+      "error",
+      { "paths": [{ "name": "react", "importNames": ["default"] }] }
+    ],
+    "sort-destructure-keys/sort-destructure-keys": "error",
+    "react/display-name": "error",
+    "react/jsx-handler-names": [
+      "error",
+      {
+        "eventHandlerPrefix": "handle",
+        "eventHandlerPropPrefix": "on",
+        "checkLocalVariables": true,
+        "checkInlineFunction": true
+      }
+    ],
+    "react/destructuring-assignment": ["error", "always"],
+    "react/jsx-curly-brace-presence": "error",
+    "react/jsx-pascal-case": "error",
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      { "prefer": "type-imports" }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "object",
+          "type",
+          "index"
+        ],
+        "newlines-between": "never",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "pathGroups": [
+          {
+            "pattern": "{react,react-dom/**,react-router-dom}",
+            "group": "builtin",
+            "position": "before"
+          }
+        ]
+      }
+    ],
+    "unused-imports/no-unused-imports": "error"
+  }
 }
