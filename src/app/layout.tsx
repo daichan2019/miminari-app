@@ -1,6 +1,7 @@
+import Header from '@/components/heder'
 import { notoSansJp } from '@/lib/fonts'
-import type { Metadata } from 'next'
-import './globals.css'
+import { ClerkProvider } from '@clerk/nextjs'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Miminari App',
@@ -13,8 +14,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='ja'>
-      <body className={notoSansJp.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang='ja'>
+        <body className={notoSansJp.className}>
+          <Header />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
