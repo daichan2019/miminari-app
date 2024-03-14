@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header>
+    <header className="sticky top-0 w-full">
       <h1 className='text-4xl'>👂 Miminari App</h1>
     </header>
   )

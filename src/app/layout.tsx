@@ -1,4 +1,4 @@
-import Header from '@/components/heder'
+import Header from '@/components/header'
 import { notoSansJp } from '@/lib/fonts'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Metadata } from 'next'
@@ -17,8 +17,12 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang='ja'>
         <body className={notoSansJp.className}>
-          <Header />
-          {children}
+          <div className='flex min-h-screen flex-col'>
+            <Header />
+            <main className='flex-grow'>
+              {children}
+            </main>
+          </div>
         </body>
       </html>
     </ClerkProvider>
