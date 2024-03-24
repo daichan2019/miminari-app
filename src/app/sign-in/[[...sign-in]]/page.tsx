@@ -1,5 +1,5 @@
 import { SignIn } from "@clerk/nextjs";
 
-export default function Page() {
+export default function Page(): React.ReactNode {
   return <SignIn/>
 }
