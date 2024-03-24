@@ -21,12 +21,17 @@
       "quoteStyle": "single",
       "jsxQuoteStyle": "single",
       "trailingComma": "all",
-      "semicolons": "asNeeded",
-      "arrowParentheses": "asNeeded"
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSpacing": true,
+      "quoteProperties": "asNeeded"
     }
   },
   "json": {
-    "parser": { "allowComments": true },
+    "parser": {
+      "allowComments": true,
+      "allowTrailingCommas": true
+    },
     "formatter": {
       "enabled": true,
       "indentStyle": "space",
@@ -34,6 +39,7 @@
     }
   },
   "linter": {
+    "enabled": true,
     "ignore": [],
     "rules": {
       "a11y": {
@@ -107,6 +113,7 @@
         "useTemplate": "error"
       },
       "suspicious": {
+        "noApproximativeNumericConstant": "error",
         "noArrayIndexKey": "error",
         "noAssignInExpressions": "error",
         "noAsyncPromiseExecutor": "error",
@@ -114,6 +121,7 @@
         "noClassAssign": "error",
         "noCommentText": "error",
         "noCompareNegZero": "error",
+        "noConstEnum": "error",
         "noConsoleLog": "warn",
         "noDoubleEquals": "error",
         "noDuplicateCase": "error",
